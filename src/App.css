@@ -1,0 +1,145 @@
+body, html, .app-container {
+  height: 100%;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background 0.5s;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.city-form {
+  margin: 30px 0 10px 0;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+.city-form input {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.city-form button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+.suggestions {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.suggestions li:hover {
+  background: #f0f0f0;
+}
+
+.current-weather {
+  margin: 20px 0 10px 0;
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  z-index: 2;
+}
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+.temp {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.forecast {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 16px;
+  padding: 16px 0 8px 0;
+  z-index: 2;
+}
+.forecast-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+}
+.forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  padding: 4px 0;
+}
+
+.error {
+  color: #d32f2f;
+  margin: 10px 0;
+  z-index: 2;
+}
+
+/* 배경 스타일 */
+.clear-bg {
+  background: linear-gradient(135deg, #87ceeb 0%, #f5fafd 100%);
+}
+.clouds-bg {
+  background: linear-gradient(135deg, #b0bec5 0%, #ece9e6 100%);
+}
+rain-bg {
+  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+}
+thunder-bg {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+snow-bg {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+}
+default-bg {
+  background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%);
+} 
